@@ -1,0 +1,4 @@
+voldemort.log*
+_site
+.DS_Store
+posts/.DS_Store
