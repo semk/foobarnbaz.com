@@ -1,6 +1,6 @@
 ---
 title: GitHub powered blogging
-date: '02-09-2010'
+date: '23-09-2010'
 time: '2:28'
 ---
 {% extends "post.html" %}
