@@ -29,12 +29,12 @@ paginate: true
 <div class="blog-nav">
 {% if paginator.previous_page != None %}
 <div class="blog-prev">
-<a href="/page/{{ paginator.previous_page }}">Newer</a>
+<a href="/page{{ paginator.previous_page }}">Newer</a>
 </div>
 {% endif %}
 {% if paginator.next_page != None %}
 <div class="blog-next">
-<a href="/page/{{ paginator.next_page }}">Older</a>
+<a href="/page{{ paginator.next_page }}">Older</a>
 </div>
 {% endif %}
 </div>
