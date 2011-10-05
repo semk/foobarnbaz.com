@@ -9,6 +9,18 @@ title: About
 
 [Sreejith K](/about/) (aka [semk](http://github.com/semk)/[splusk](http://twitter.com/splusk)) is a [Python](http://python.org) Developer living in Chennai, India. He is a passionate [GNU/Linux](http://linux.org) [hacker](http://www.catb.org/~esr/faqs/hacker-howto.html) and a sports lover who skips his sleep to watch all [FCBarcelona](http://fcbarcelona.cat) matches live. When he's not busy, you'd find him mashing buttons on his [PlayStation 3](http://en.wikipedia.org/wiki/PlayStation_3) playing his [favourite games](/games/).
 
+Apart from writing on my own site, I do follow some popular tech writings on the web. These are some of my favourites.
+
+* *[Armin Ronacher's Thoughts and Writings](http://lucumr.pocoo.org/)*
+* *[Georg Brandl's Pythonic](http://pythonic.pocoo.org/)*
+* *[Jeff Atwood's Coding Horror](http://codinghorror.com)*
+* *[Ian Bicking: A Blog](http://blog.ianbicking.org/)*
+
+And some of my friends are also into blogging
+
+* *[Abhi's Experiments](http://abhidsm.blogspot.com)*
+* *[Manu's new Universe](http://manuknkra.wordpress.com/)*
+
 ## My setup ##
 
 Recently I switched from a Toshiba Satellite L310 laptop to a [13" Macbook Pro](http://www.apple.com/in/macbookpro/specs-13inch.html) (MC700, Intel Core i5, 4GB RAM) which I use for all my computing needs. I use [Vim](http://vim.org), [TextMate](http://macromates.com) and [Eclipse](http://eclipse.org) for all the coding and editing purposes and prefer [iTerm](http://iterm.sourceforge.net/) for commandline access. And I coudn't live without my Ubuntu VM's running under [VirtualBox](http://www.virtualbox.org/).

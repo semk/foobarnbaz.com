@@ -1,0 +1,16 @@
+---
+title: "Voldemort: A Jinja2 powered static site generator"
+date: '05-10-2011'
+time: '14:50'
+---
+{% extends "post.html" %}
+
+{% block postcontent %}
+{% markdown %}
+[Voldemort](https://github.com/semk/voldemort) is a blog-aware static site generator inspired by [Jinja2](http://jinja.pocoo.org/2/). All these times this blog was generated using [Jekyll](https://github.com/mojombo/jekyll) and I always wanted to use something Pythonic. [Hyde](http://ringce.com/hyde) was there, but the awesomeness of Jinja2 forced me to write Voldemort on my own.
+
+![Voldemort](/images/posts/2011-10-05-voldemort-a-jinja-powered-static-site-generator/voldemort.jpg)
+
+Voldemort has its own advantages. You can templatize your HTML pages using Jinja and write posts using [Markdown](http://daringfireball.net/projects/markdown). And if you like this website, then you've got one reason to tryout Voldemort. Go for an [install](http://pypi.python.org/pypi/voldemort/0.6.0) or grab the [sources](https://github.com/semk/voldemort) if you want to tweak it your own way.
+{% endmarkdown %}
+{% endblock %}
