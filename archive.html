@@ -4,14 +4,25 @@ title: Archive
 {% extends "listing.html" %}
 
 {% block content %}
+
+<style>
+h1:before{content:''}
+dl{clear:both;width:100%;overflow:hidden;background:#fff url(/images/layout/dot.png) repeat-x 0 0.8em}
+dt,dd{background:#fff}
+dt{float:left;padding-right:3px}
+dd{margin:0;float:right;padding-left:3px}
+ol{margin:1em 0 0 0;padding:0}
+li{clear:both;width:100%;margin:0 0 1em 0;padding:0;overflow:hidden}
+</style>
+
 <h2>Archive</h2>
 
-<ol class="archive">
+<ol>
 {% for post in posts %}
   <li>
-    <span class="date">{{ post.date | date("%b %d, %Y") }}</span>
-    <a href="{{ post.url }}">{{ post.title }}</a>
+    <dl><dt><a href="{{ post.url }}">{{ post.title }}</a><dd>{{ post.date | date_to_string }}</dl>
   </li>
 {% endfor %}
 </ol>
+
 {% endblock %}
