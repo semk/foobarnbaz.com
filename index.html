@@ -1,5 +1,5 @@
 ---
-title: Pythonned!
+title: Codeception
 paginate: true
 ---
 {% extends "listing.html" %}
@@ -20,7 +20,7 @@ paginate: true
 <p class="full-post"><a href="{{ post.url }}#comments">comments...</a></p>
 {% else %}
 <p>{{ post.content }}</p>
-<p class="full-post"><a href="{{ post.url }}">comments...</a></p>
+<p class="full-post"><a href="{{ post.url }}#comments">comments...</a></p>
 {% endif %}
 <p class=a>&#x2767;
 </article>

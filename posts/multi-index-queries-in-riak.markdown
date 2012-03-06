@@ -14,10 +14,18 @@ time: '23:11'
 
 Riak also supports multiple backends for Key-value store. And Google's own [LevelDB](code.google.com/p/leveldb) is one of them. One of the advantage of using LevelDB with Riak is that they support Secondary Indexes. This is a way to retrieve data faster when you want to use an SQL like Query interface. But the problem is that Riak only supports single index queries. That means, you will be able to query only one field at a time.
 
-I wrote a Python wrapper that allows multiple index queries using Secondary indexes and MapReduce. The basic idea is as follows
+I wrote a Python wrapper that allows multiple index queries using Secondary indexes and MapReduce. The basic steps are
 
 1. Query Multiple Indexes and get the associated keys
 2. Pass the keys to a MapReduce job where Multiple filters are again evaluated. The map phase applies all the conditions to individual keys.
+
+>*As suggested by Elias Levy, it is ideal to compute the intersection of all the index queries rather than evaluating filters on Map Phase as this involves parsing the data and validating filters. This could become very slow when the number of keys returned by a single index query is larger compared to other indexes. The sources are updated to reflect this change.*
+
+So the new steps are
+
+1. Query Indexes and get the key sets
+2. Find the intersection of these key sets
+3. Pass the resulting keys to MapReduce where we fetch and sort the data.
 
 Using this, you can write queries like
 
@@ -52,6 +60,7 @@ Using this, you can write queries like
     for res in query.order('age', 'ASC').offset(1).limit(1).run():
         print res
 
-You can find the full source code at [GitHub](https://github.com/semk/utils/blob/master/riak_multi_query.py)
+You can find the full source code at [GitHub](https://github.com/semk/utils/blob/master/riak_multi_query.py).
+
 {% endmarkdown %}
 {% endblock %}
