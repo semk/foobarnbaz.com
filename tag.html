@@ -1,12 +1,13 @@
 ---
-title: Codeception
-paginate: true
+title: Tags
 ---
+
 {% extends "listing.html" %}
 
 {% block content %}
 
-{% for post in paginator.posts %}
+{% for post in tag.posts %}
+
 <article class="excerpt">
 <header>
 <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
@@ -18,21 +19,10 @@ paginate: true
 <p>{{ post.content }}</p>
 <p class="full-post"><a href="{{ post.url }}#comments">comments...</a></p>
 <p class=a>&#x2767;
-</article>
-{% endfor %}
 
-<div class="blog-nav">
-{% if paginator.previous_page != None %}
-<div class="blog-prev">
-<a href="/page{{ paginator.previous_page }}">Newer</a>
-</div>
-{% endif %}
-{% if paginator.next_page != None %}
-<div class="blog-next">
-<a href="/page{{ paginator.next_page }}">Older</a>
-</div>
-{% endif %}
-</div>
+</article>
+
+{% endfor %}
 
 {% include "blog-search.html" %}
 {% endblock %}

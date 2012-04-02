@@ -1,7 +1,13 @@
 # voldemort configuration file
-layout_dir  : layout
-include_dir : include
+layout_dirs : 
+                - layout
+                - include
 posts_dir   : posts
 post_url    : "%Y/%m/%d"
 site_dir    : _site
 paginate    : 5
+site        :
+    name        : "Codeception"
+    address     : "http://foobarnbaz.com"
+    author_name : "Sreejith Kesavan"
+    author_email: "sreejithemk@gmail.com"
