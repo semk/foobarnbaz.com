@@ -2,6 +2,7 @@
 title: Hacking PlayStation 3 with Teensy 2.0
 date: '02-10-2010'
 time: '18:28'
+tags: ['Playstation 3', 'Hacks', 'Teensy', 'Hardware']
 ---
 {% extends "post.html" %}
 

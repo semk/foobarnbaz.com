@@ -2,6 +2,7 @@
 title: A commandline mapper
 date: '02-10-2010'
 time: '23:28'
+tags: ['Python', 'Shell', 'Tips', 'xargs']
 ---
 {% extends "post.html" %}
 

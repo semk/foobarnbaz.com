@@ -2,6 +2,7 @@
 title: Ubuntu Maverick Meerkat
 date: '07-11-2010'
 time: '20.00'
+tags: ['Linux', 'Ubuntu']
 ---
 {% extends "post.html" %}
 

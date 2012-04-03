@@ -2,6 +2,7 @@
 title: Custom Authentication for Google App Engine apps
 date: '31-07-2011'
 time: '17:45'
+tags: ['Python', 'Tips', 'App Engine', 'GAESessions']
 ---
 {% extends "post.html" %}
 

@@ -2,6 +2,7 @@
 title: HyperGAE - Use Hypertable for App Engine Datastore
 date: '08-01-2011'
 time: '03:30'
+tags: ['App Engine', 'HyperGAE', 'Hypertable', 'Python']
 ---
 {% extends "post.html" %}
 

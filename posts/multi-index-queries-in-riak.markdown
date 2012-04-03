@@ -2,6 +2,7 @@
 title: Multiple Index queries in Riak using Python
 date: '25-02-2012'
 time: '23:11'
+tags: ['Python', 'Riak', 'NoSQL']
 ---
 
 {% extends "post.html" %}

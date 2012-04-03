@@ -2,6 +2,7 @@
 title: Meet Raspberry Pi, the $25 computer
 date: '07-05-2011'
 time: '22:15'
+tags: ['Raspberry Pi', 'Linux', 'Computer', 'Hardware']
 ---
 {% extends "post.html" %}
 

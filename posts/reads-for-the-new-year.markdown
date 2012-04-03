@@ -2,6 +2,7 @@
 title: Reads for the New Year
 date: '31-12-2010'
 time: '22:00'
+tags: ['Books']
 ---
 {% extends "post.html" %}
 

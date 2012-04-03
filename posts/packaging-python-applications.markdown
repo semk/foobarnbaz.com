@@ -2,6 +2,7 @@
 title: Packaging Python Applications
 date: '02-10-2011'
 time: '22:25'
+tags: ['Python', 'Packaging', 'stdeb', 'setuptools', 'Debian', 'Linux']
 ---
 {% extends "post.html" %}
 

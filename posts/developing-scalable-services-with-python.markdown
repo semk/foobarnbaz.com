@@ -2,6 +2,7 @@
 title: Developing scalable services with Python
 date: '30-08-2011'
 time: '22:08'
+tags: ['Python', 'Scalability', 'Multiprocessing', 'Socket', 'Preforking']
 ---
 {% extends "post.html" %}
 

@@ -2,6 +2,7 @@
 title: Cricinfo api (unofficial) for Python
 date: '30-11-2010'
 time: '18.00'
+tags: ['Python', 'Cricinfo', 'API']
 ---
 {% extends "post.html" %}
 

@@ -2,6 +2,7 @@
 title: Factory/Service mode on PlayStation 3
 date: '12-12-2010'
 time: 01:18
+tags: ['Playstation 3', 'Hacks', 'Service Mode']
 ---
 {% extends "post.html" %}
 

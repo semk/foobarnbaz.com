@@ -2,6 +2,7 @@
 title: I have an'droid
 date: '21-02-2011'
 time: '23:00'
+tags: ['Android', 'Hardware', 'Java', 'LG Optimus One']
 ---
 {% extends "post.html" %}
 

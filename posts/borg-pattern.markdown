@@ -2,6 +2,7 @@
 title: Borg Pattern
 date: '06-10-2010'
 time: '10:45'
+tags: ['Design Pattern', 'BORG', 'Borg Pattern', 'Singleton', 'Python']
 ---
 {% extends "post.html" %}
 

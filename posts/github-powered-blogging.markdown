@@ -2,6 +2,7 @@
 title: GitHub powered blogging
 date: '23-09-2010'
 time: '2:28'
+tags: ['GitHub', 'Blogging']
 ---
 {% extends "post.html" %}
 

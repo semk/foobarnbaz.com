@@ -2,6 +2,7 @@
 title: Building Custom Firmware for PS3
 date: '05-01-2011'
 time: '22:00'
+tags: ['Playstation 3', 'Custom Firmware', 'Gaming', 'Hacks']
 ---
 {% extends "post.html" %}
 

@@ -2,6 +2,7 @@
 title: Learn web development with Flask
 date: '25-12-2010'
 time: '14:45'
+tags: ['Python', 'Flask']
 ---
 {% extends "post.html" %}
 

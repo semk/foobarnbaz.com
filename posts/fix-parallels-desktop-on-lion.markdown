@@ -2,6 +2,7 @@
 title: Fix Parallels Desktop on Mac OSX Lion
 date: '27-07-2011'
 time: '23:45'
+tags: ['Mac OSX', 'Lion', 'Parallels', 'Tips']
 ---
 {% extends "post.html" %}
 
