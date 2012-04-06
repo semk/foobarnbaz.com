@@ -34,5 +34,14 @@ paginate: true
 {% endif %}
 </div>
 
+<div>
+<p><em>Tag Cloud</em>:</p>
+<p>
+{% for tag in tags %}
+<a href="{{tag.url}}">{{tag.name}}</a>
+{% endfor %}
+</p>
+</div>
+
 {% include "blog-search.html" %}
 {% endblock %}

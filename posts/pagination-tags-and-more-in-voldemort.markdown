@@ -8,7 +8,7 @@ tags: ['Python', 'Voldemort']
 
 {% block postcontent %}
 {% markdown %}
-![Voldemort](images/posts/2012-04-06-pagination-tags-and-more-in-voldemort/term.png)
+![Voldemort](/images/posts/2012-04-06-pagination-tags-and-more-in-voldemort/term.png)
 
 I have been adding a few useul features to [Voldemort](https://github.com/semk/voldemort) for the last few months and it did come out pretty good. It now sports automatic Atom Feed and sitemap generation, thanks to the contibutions from my friend [Stanislav Yudin](http://endlessinsomnia.com). Here are the highlights.
 
