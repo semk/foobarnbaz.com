@@ -1,19 +1,21 @@
 {% extends "listing.html" %}
 
 {% block content %}
-{% include "blog-nav.html" %}
-
 <h1>{{ post.title }}</h1>
 
-<p class=a>&#x2767;</p>
+<time datetime="{{ post.date | date("%Y-%m-%d") }}">
+  {{ post.date | date("%b %d, %Y") }}
+</time>
+
+<p></p>
 
 {{ post.content }}
 
 <div>
-Tagged under {% for tag in post.tags %} <em><a href="{{tag.url}}">{{ tag.name }}</a></em>{% if not loop.last %},{% endif %} {% endfor %}
+  Tagged under {% for tag in post.tags %} <em><a href="{{tag.url}}">{{ tag.name }}</a></em>{% if not loop.last %},{% endif %} {% endfor %}
 <div>
 
-<p class=a>&#x2767;</p>
+{% include "blog-nav.html" %}
 
 {% include "disqus.html" %}
 {% endblock %}
