@@ -80,6 +80,16 @@ Now we will try to create custom objects and try to find their identities.
 	140730612513248
 	>>> id(baz)
 	140730612513320
+	>>> list_a = [1, 2, 3] # lists are mutable objects
+	>>> list_b = [1, 2, 3]
+	>>> id(list_a)
+	140116233272136
+	>>> id(list_b)
+	140116233272064
+	>>> [id(value) for value in list_a]
+	[24221624, 24221600, 24221576] # `int` is immutable
+	>>> [id(value) for value in list_b]
+	[24221624, 24221600, 24221576] # same as above
 
 As you can see, the two instances have different identities. That means, there are two different copies of the same object in memory. This behaviour is different from what you have seen before. When you are creating objects they will have unique identities unless you are using [Singleton Pattern](http://foobarnbaz.com/2010/10/06/borg-pattern/). All [immutable](http://en.wikipedia.org/wiki/Immutable_object) objects like `str`, `int`, `float` will have same identities when objects are created simultaneously.
 {% block postcontent %}
