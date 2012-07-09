@@ -1,8 +1,8 @@
 ---
-title: Understanding Python variables
+title: Understanding Python variables and Memory Management
 date: '08-07-2012'
 time: '23:45'
-tags: ['Python', 'C', Variables']
+tags: ['Python', 'C', 'Variables', 'Memory Management']
 ---
 {% extends "post.html" %}
 Have you ever noticed any difference between variables in Python and C? For example, when you do an assignment like the following in C, it actually creates a block of memory space so that it can hold the value for that variable.
@@ -53,6 +53,35 @@ Assigning one variable to another makes a new tag bound to the same value as sho
 
 Other languages have 'variables'. Python has 'names'.
 
+### A bit about Python's memory management
+
+As you have seen before, a value will have only one copy in memory and all the variables having this value will refer to this memory location. For example when you have variables `a`, `b`, `c` having a value 10, it doesn't mean that there will be 3 copy of `10`s in memory. There will be only one `10` and all the variables `a`, `b`, `c` will point to this value. Once a variable is updated, say you are doing `a += 1` a new value `11` will be allocated in memory and `a` will be pointing to this.
+
+Let's check this behaviour with Python Interpreter. Start the Python Shell and try the following for yourselves.
+
+	:::python
+	>>> a_list = [1] * 10
+	>>> a_list
+	[1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+	>>> [id(value) for value in a_list]
+	[26089400, 26089400, 26089400, 26089400, 26089400, 26089400, 26089400, 26089400, 26089400, 26089400]
+
+`id()` will return an objects memory address (object's identity). As you have noticed, when you create a list with same values, the values are not copied in memory. In fact, you are getting a list with references to the value `1`; not a list with 10 copies of `1`.
+
+Now we will try to create custom objects and try to find their identities.
+
+	:::python
+	>>> class Foo:
+	...     pass
+	... 
+	>>> bar = Foo()
+	>>> baz = Foo()
+	>>> id(bar)
+	140730612513248
+	>>> id(baz)
+	140730612513320
+
+As you can see, the two instances have different identities. That means, there are two different copies of the same object in memory. This behaviour is different from what you have seen before. When you are creating objects they will have unique identities unless you are using [Singleton Pattern](http://foobarnbaz.com/2010/10/06/borg-pattern/). All [immutable](http://en.wikipedia.org/wiki/Immutable_object) objects like `str`, `int`, `float` will have same identities when objects are created simultaneously.
 {% block postcontent %}
 {% markdown %}
 
