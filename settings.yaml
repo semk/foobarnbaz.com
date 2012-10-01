@@ -7,7 +7,13 @@ post_url    : "%Y/%m/%d"
 site_dir    : _site
 paginate    : 5
 site        :
-    name        : "Codeception"
-    address     : "http://foobarnbaz.com"
-    author_name : "Sreejith Kesavan"
-    author_email: "sreejithemk@gmail.com"
+                name        : "Codeception"
+                address     : "http://foobarnbaz.com"
+                author_name : "Sreejith Kesavan"
+                author_email: "sreejithemk@gmail.com"
+deploy      :
+                user  : semk
+                at    : github.com
+                to    : semk.github.com
+    
+    
