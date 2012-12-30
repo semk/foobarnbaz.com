@@ -1,34 +1,10 @@
-@font-face {
-    font-family: "Fontin Sans";
-    font-weight: normal;
-    font-style: normal;
-    src: url("/fonts/Fontin_Sans_R_45b.otf");
-}
-
-@font-face {
-    font-family: "Fontin Sans Bold";
-    src: url("/fonts/Fontin_Sans_B_45b.otf");
-}
-
-@font-face {
-    font-family: "Fontin Sans Italic";
-    src: url("/fonts/Fontin_Sans_I_45b.otf");
-}
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 
 body {
-    padding:50px;
-    word-wrap: break-aword;
-    font-family: "Fontin Sans", sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-}
-
-strong {
-    font-family: "Fontin Sans Bold", sans-serif bold;
-}
-
-em {
-    font-family: "Fontin Sans Italic", sans-serif italic;
+  padding:50px;
+  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#777;
+  font-weight:300;
 }
 
 h1, h2, h3, h4, h5, h6 {
