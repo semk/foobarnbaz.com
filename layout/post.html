@@ -12,8 +12,10 @@
 {{ post.content }}
 
 <div>
-  Tagged under {% for tag in post.tags %} <em><a href="{{tag.url}}">{{ tag.name }}</a></em>{% if not loop.last %},{% endif %} {% endfor %}
+  <strong>Tagged under</strong> {% for tag in post.tags %} <em><a href="{{tag.url}}">{{ tag.name }}</a></em>{% if not loop.last %},{% endif %} {% endfor %}
 <div>
+
+<br/>
 
 {% include "blog-nav.html" %}
 

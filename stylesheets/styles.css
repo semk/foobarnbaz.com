@@ -300,3 +300,10 @@ ul.posts span {
   font-family: Monaco, "Courier New", monospace;
   font-size: 80%;
 }
+
+.alignleft {
+  float: left;
+}
+.alignright {
+  float: right;
+}
