@@ -12,25 +12,27 @@ paginate: true
   {{ post.date | date("%b %d, %Y") }}
 </time>
 <p></p>
-{{ post.content }}
-<p><a href="{{ post.url }}#comments">comments...</a></p>
+{{ post.content | excerpt(70) }}
+<div class="post-excerpt">
+  <p class="alignleft"><a href="{{ post.url }}">Read more...</a></p> 
+  <p class="alignright"><a href="{{ post.url }}#comments">Comments...</a></p>
+  <div style="clear: both;"></div>
+</div>
+<hr>
 {% endfor %}
 
 <div class="blog-nav">
   {% if paginator.previous_page != None %}
-  <div class="blog-prev">
-    <a href="/page{{ paginator.previous_page }}">Newer</a>
-  </div>
+  <p class="alignleft"><a href="/page{{ paginator.previous_page }}">&larr; Previous Page</a></p>
   {% endif %}
   {% if paginator.next_page != None %}
-  <div class="blog-next">
-    <a href="/page{{ paginator.next_page }}">Older</a>
-  </div>
+  <p class="alignright"><a href="/page{{ paginator.next_page }}">Next Page &rarr;</a></p>
   {% endif %}
+  <div style="clear: both;"></div>
 </div>
 
 <div>
-  <p><em>Tag Cloud</em>:</p>
+  <p><strong>Tag Cloud</strong>:</p>
   <p>
     {% for tag in tags %}
     <a href="{{tag.url}}">{{tag.name}}</a>
