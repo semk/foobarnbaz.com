@@ -3,11 +3,9 @@ title: Factory/Service mode on PlayStation 3
 date: '12-12-2010'
 time: 01:18
 tags: ['Playstation 3', 'Hacks', 'Service Mode']
+layout: 'post.html'
 ---
-{% extends "post.html" %}
 
-{% block postcontent %}
-{% markdown %}
 Here is a happy news for those who updated to firmware `>3.41` and didn't get a chance to enjoy the homwbrews for PS3. Yes, atlast we'll be able to downgrade the PS3 firmware to any version `<3.50`. The actual PSJailbreak team were the first team to release the downgrade. But many thanks to [zAxis](https://github.com/zAxis) who created [PSGrade](https://github.com/zAxis/PSGrade), an opensouce version of PSDowngrade. Using this we can put the PS3 into Factory/Service mode (Downgrade) using popular development boards like Teensy and AT90USBKEY.
 
 We should also be thankful to [KaKaRaTo](https://github.com/kakaroto) who reversed the PS3Yes Key and made it available for PSGrade. Here is PS3Yes key which he reversed from its hex.
@@ -29,6 +27,4 @@ As I was already there in firmware 3.50, I had a chance to test PSGrade. I compi
 For exiting from the service mode you need to copy a special file (Lv2diag.self) to a usb storage drive and boot the PS3. Otherwise your PS3 will still be on service mode.
 
 If you wish to downgrade the firmware (which I haven't performed yet) follow these downgrade steps from [here](http://psgroove.com/content.php?501-PS3Yes-Release-Free-PSGRADE-Downgrade-Hex-Works-on-All-AT90usb162-Boards).
-{% endmarkdown %}
-{% endblock %}
 

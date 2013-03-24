@@ -3,11 +3,9 @@ title: Borg Pattern
 date: '06-10-2010'
 time: '10:45'
 tags: ['Design Pattern', 'BORG', 'Borg Pattern', 'Singleton', 'Python']
+layout: 'post.html'
 ---
-{% extends "post.html" %}
 
-{% block postcontent %}
-{% markdown %}
 Singleton Design Patterns create all sorts of problems as you have exactly one instance for the singleton class throughout the program.
 
 	:::python
@@ -38,5 +36,3 @@ What we really care about class objects are its identity/state and behaviour, no
 	        self.__dict__ = self.__shared_state
 
 Subclass this *Borg* class and you can have a shared-state class implementation and all the instances will have the same state. For more information about different patterns in python, checkout this [link](http://www.suttoncourtenay.org.uk/duncan/accu/pythonpatterns.html).
-{% endmarkdown %}
-{% endblock %}

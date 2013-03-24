@@ -3,12 +3,9 @@ title: Multiple Index queries in Riak using Python
 date: '25-02-2012'
 time: '23:11'
 tags: ['Python', 'Riak', 'NoSQL']
+layout: 'post.html'
 ---
 
-{% extends "post.html" %}
-
-{% block postcontent %}
-{% markdown %}
 ![Riak Logo](http://upload.wikimedia.org/wikipedia/en/5/53/Riak_product_logo.png)
 
 [Riak](http://wiki.basho.com/Riak.html) is a [Amazon Dynamo](http://www.allthingsdistributed.com/2007/10/amazons_dynamo.html) inspired masterless Key-Value store written in Erlang. It is one of those [NoSQL](http://en.wikipedia.org/wiki/NoSQL) databases that is rock stable, production ready and promises zero downtime. I have been using Riak at work and was literally blown away by its simplicity (Setting up a three node cluster wouldn't even take ten minutes) and the kind of support the Riak Community provides. And it is amazingly fast too. The Data retrieval operations in Riak are basically using methods like Get (by key), MapReduce and Key Filters.
@@ -62,6 +59,3 @@ Using this, you can write queries like
         print res
 
 You can find the full source code at [GitHub](https://github.com/semk/utils/blob/master/riak_multi_query.py).
-
-{% endmarkdown %}
-{% endblock %}

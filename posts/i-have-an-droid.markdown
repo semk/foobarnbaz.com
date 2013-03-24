@@ -3,11 +3,9 @@ title: I have an'droid
 date: '21-02-2011'
 time: '23:00'
 tags: ['Android', 'Hardware', 'Java', 'LG Optimus One']
+layout: 'post.html'
 ---
-{% extends "post.html" %}
 
-{% block postcontent %}
-{% markdown %}
 Finally my wish came true. Now I'm a proud owner of an Android phone. Its LG Optimus One, better known as LG P500. Good that it comes with Froyo and LG promises an update to Gingerbread. Here you can find the phone [specs](http://www.gsmarena.com/lg_optimus_one_p500-3516.php).
 
 ![LG Optimus One](http://www.gadgetvenue.com/wp-content/uploads/2010/09/LG-optimus-one-300x300.jpg)
@@ -36,5 +34,3 @@ Google has done a great job in developing an easy-to-use and feature-abundant SD
 ![Android Emulator](/images/posts/2011-02-21-i-have-an-droid/emulator.png)
 
 I'm hoping to develop some useful applications for Android while I finish reading the book. So keep an eye on my [Git Repo](http://github.com/semk).
-{% endmarkdown %}
-{% endblock %}

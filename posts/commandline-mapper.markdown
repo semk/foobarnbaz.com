@@ -3,11 +3,9 @@ title: A commandline mapper
 date: '02-10-2010'
 time: '23:28'
 tags: ['Python', 'Shell', 'Tips', 'xargs']
+layout: 'post.html'
 ---
-{% extends "post.html" %}
 
-{% block postcontent %}
-{% markdown %}
 Python provides a builtin `map` function which applies a method over a list of entities. This function comes handy in a lot of situations as in
 
     :::python
@@ -23,5 +21,3 @@ Similar functionality can be achieved in linux commandline using a combination o
 	$ find . -name "*.jpg" -print0 | xargs -0 -I img convert -resize 600x450 img img
 
 The `-print0` option for find list files without the EOF marker so that it can be used efficiently in `xargs`. The -0 option indicates this. You can use a replace string similar to `img` used here, to replace initial arguments of the command from standard input. See `man xargs` for more information about this utility.
-{% endmarkdown %}
-{% endblock %}

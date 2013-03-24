@@ -3,11 +3,9 @@ title: New set of Developer Tools in Firefox
 date: '06-04-2012'
 time: '20:45'
 tags: ['Firefox', 'Tips', 'Hacks', 'Debug']
+layout: 'post.html'
 ---
-{% extends "post.html" %}
 
-{% block postcontent %}
-{% markdown %}
 My friends at work were using [Google Chrome](http://chrome.google.com) for Debugging web pages saying that Chrome's Developer Tools are superior to Firefox. But starting with the new [Aurora update](http://hacks.mozilla.org/2011/11/developer-tools-in-firefox-aurora-10/) Firefox Developer Tools looks way cooler with the new Page Inspector, Style Editor and Scratchpad.
 
 The all new `Right Click -> Inspect Element` feature lets you select any HTML element and see the HTML code or Styles associated with it in clean Developer-Friendly manner.
@@ -31,5 +29,3 @@ And finally for testing Javascript code snippets, there is Scratchpad which also
 ![Scratchpad](/images/posts/2012-04-06-firefox-developer-tools/scratchpad.png)
 
 I find it quite useful and intuitive. How about you?
-{% endmarkdown %}
-{% endblock %}

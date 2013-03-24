@@ -3,11 +3,9 @@ title: Packaging Python Applications
 date: '02-10-2011'
 time: '22:25'
 tags: ['Python', 'Packaging', 'stdeb', 'setuptools', 'Debian', 'Linux']
+layout: 'post.html'
 ---
-{% extends "post.html" %}
 
-{% block postcontent %}
-{% markdown %}
 A few days ago, I came across a situation where I needed to create Debian packages for some Python libraries on which our software was dependant on. All these time we were creating and distributing the application as Eggs built using [setuptools](http://pypi.python.org/pypi/setuptools) `setup.py` script. Later on this became a problem since some other applications which we were using were not Python applications and were packaged as `.deb` packages. This situation made us to build `.deb` packages for our Python software as well.
 
 The real challenge here was packaging all the dependencies our Python application has brought in, as most of the dependencies were having only `egg` distributions. Luckily there was an extension to setuptools called [stdeb](https://github.com/astraw/stdeb) which will allow you to generate debian packages using your setup.py script. It'll automatically add the dependencies in the `debian/control` file after searching for the dependencies using `apt-cache`. stdeb will do something like `apt-cache dump | grep <package>` to find whether there is a proper debian package for the dependencies. If they found the correct one in apt-cache, `debian/control` file will be updated with that information. But as I said, most of the dependencies were not packaged as `.deb`. So we downloaded all the dependencies using the `easy_install` command and created `.deb` packages for them using `stdeb`.
@@ -66,6 +64,4 @@ That will create a directory named `debian` which contain all the stuffs needed 
 	dpkg-buildpackage -us -uc
 
 Now you can build the main application debs by editing the control file manually since stdeb won't add the dependencies. But you know you have them in your hand :-).
-{% endmarkdown %}
-{% endblock %}
 

@@ -3,11 +3,8 @@ title: Developing scalable services with Python
 date: '30-08-2011'
 time: '22:08'
 tags: ['Python', 'Scalability', 'Multiprocessing', 'Socket', 'Preforking']
+layout: 'post.html'
 ---
-{% extends "post.html" %}
-
-{% block postcontent %}
-{% markdown %}
 Developing multi-threaded applications in python is a "Pain In The Ass". And the [GIL](http://wiki.python.org/moin/GlobalInterpreterLock) (Global Interpreter Lock) takes away the advantage of utilizing multiple cores in a machine. It doesn't matter how many cores a CPU have, GIL prevents threads from running in multiple cores. So python programs would't get the maximum performance out of the CPU when they use threads in their services.
 
 In many cases you might need to write services where you need to listen on a port and wait for the client connection to do some task. If multiple clients are connecting to this service simultaneously then you might need to spawn threads to handle the requests. Considering the fact that GIL introduces a performance bottleneck, the best way to solve this situation is to use python's [multiprocessing](http://docs.python.org/library/multiprocessing.html) capabilities. This library provides almost `threading` like class implementations. 
@@ -109,5 +106,3 @@ Another way to solve this issue is by spawning multiple process from the main se
 	    test()
 
 I wrote a simple wrapper for this kind of services which can be scaled. You can find it [here](http://github.com/semk/utils/prefork_server.py).
-{% endmarkdown %}
-{% endblock %}

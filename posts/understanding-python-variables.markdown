@@ -3,8 +3,9 @@ title: Understanding Python variables and Memory Management
 date: '08-07-2012'
 time: '23:45'
 tags: ['Python', 'C', 'Variables', 'Memory Management']
+layout: 'post.html'
 ---
-{% extends "post.html" %}
+
 Have you ever noticed any difference between variables in Python and C? For example, when you do an assignment like the following in C, it actually creates a block of memory space so that it can hold the value for that variable.
 
 	:::c
@@ -92,8 +93,3 @@ Now we will try to create custom objects and try to find their identities.
 	[24221624, 24221600, 24221576] # same as above
 
 As you can see, the two instances have different identities. That means, there are two different copies of the same object in memory. This behaviour is different from what you have seen before. When you are creating objects they will have unique identities unless you are using [Singleton Pattern](http://foobarnbaz.com/2010/10/06/borg-pattern/). All [immutable](http://en.wikipedia.org/wiki/Immutable_object) objects like `str`, `int`, `float` will have same identities when objects are created simultaneously.
-{% block postcontent %}
-{% markdown %}
-
-{% endmarkdown %}
-{% endblock %}

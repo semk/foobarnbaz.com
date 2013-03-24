@@ -3,11 +3,9 @@ title: Simple file upload progressbar in PyQt
 date: '31-12-2012'
 time: '14:45'
 tags: ['Python', 'PyQt', 'Qt', 'GUI', 'QProgressDialog', 'urllib2', 'StringIO']
+layout: 'post.html'
 ---
-{% extends "post.html" %}
 
-{% block postcontent %}
-{% markdown %}
 I've been learning the [Qt](http://qt-project.org/) Framework for the last few months and righfully it took 
 the honour of being my favourite GUI toolkit ;-). But still I don't like KDE. I have used 
 [Tkinter](http://wiki.python.org/moin/TkInter) for quite some time when I was studying engineering. But Qt is 
@@ -102,5 +100,3 @@ which reports the bytes uploaded/read by the `urllib2` library.
 
 And this happens to be my last blog post of 2012. Happy to have survived the apocalypse, no zombies, earthquakes or Tsunamis. 
 Wishing you all a prosperous and happy new year. Welcome 2K13.
-{% endmarkdown %}
-{% endblock %}

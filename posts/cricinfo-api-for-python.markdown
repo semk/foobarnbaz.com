@@ -3,11 +3,8 @@ title: Cricinfo api (unofficial) for Python
 date: '30-11-2010'
 time: '18.00'
 tags: ['Python', 'Cricinfo', 'API']
+layout: 'post.html'
 ---
-{% extends "post.html" %}
-
-{% block postcontent %}
-{% markdown %}
 Recently I started developing a Python [library](https://github.com/semk/cricinfo) for accessing live information from [ESPN Cricinfo](http://espncricinfo.com) like live scores, innings details and player profiles. Currently, it only fetches live match information using a simple Python iterator.
 
 	:::python
@@ -33,6 +30,4 @@ I wish to add features for every match like full scorecard, innings details etc 
 	    print innings.overs
 	    print innings.wickets
 
-I'll update about the changes being done for the api. So keep reading my blog. I need your suggestions to make it a useful one. 
-{% endmarkdown %}
-{% endblock %}
+I'll update about the changes being done for the api. So keep reading my blog. I need your suggestions to make it a useful one.

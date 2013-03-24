@@ -3,11 +3,9 @@ title: Building Custom Firmware for PS3
 date: '05-01-2011'
 time: '22:00'
 tags: ['Playstation 3', 'Custom Firmware', 'Gaming', 'Hacks']
+layout: 'post.html'
 ---
-{% extends "post.html" %}
 
-{% block postcontent %}
-{% markdown %}
 The 27th [Chaos Communication Congress](http://events.ccc.de/congress/2010/wiki/Welcome) revealed the [*Epic Programming Fail*](http://www.engadget.com/2010/12/29/hackers-obtain-ps3-private-cryptography-key-due-to-epic-programm/) on the PlayStation 3 security. Finally it turned  out that Sony's ECDSA algorithm for signing apps use a random number generator which always returns the same number (No, I'm not kidding). The [fail0verflow](http://fail0verflow.com) team, who found out this fail, used the following famous [xkcd](http://xkcd.com) comic to describe Sony's ECDSA algorithm.
 
 ![Random Number](http://imgs.xkcd.com/comics/random_number.png)
@@ -44,5 +42,3 @@ You can rename this CFW.PUP to PS3UPDAT.PUP and copy it to PS3->UPDATE directory
 * [fail0verflow's presentation on Console Hacking](http://events.ccc.de/congress/2010/Fahrplan/attachments/1780_27c3_console_hacking_2010.pdf) - 27th Chaos Communication Congress
 
 * [fail0verflow and Geohot Interview with BBC](http://www.bbc.co.uk/news/technology-12116051)
-{% endmarkdown %}
-{% endblock %}

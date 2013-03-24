@@ -3,11 +3,9 @@ title: Scratch - A Magic Tool for Tux Paint
 date: '11-04-2011'
 time: '20:45'
 tags: ['Tux Paint', 'Magic Tool', 'C', 'Scratch']
+layout: 'post.html'
 ---
-{% extends "post.html" %}
 
-{% block postcontent %}
-{% markdown %}
 [Tux Paint](http://tuxpaint.org/) is a drawing software for children that provides a kids-like user interface. Tuxpaint does have some nice tools integrated in it which helps the kids to create their drawing [masterpieces](http://tuxpaint.org/gallery/) using a computer. Simply speaking its the GIMP for kids of 3-12 years.
 
 But what I was excited about Tux Paint is the availability of [Magic Tool Plug-in API](http://www.tuxpaint.org/presentations/tuxpaint-magic-api.pdf) using which you can create Magic Tools that creates some sort of graphical effect on the canvas. Tux Paint already provides some Magic Tools by default like blur, bricks etc. Tux paint is fully written in C and uses [SDL](http://libsdl.org) for graphics programming. There are basically two kinds of tools we can create using the API. One that affects the whole canvas and one that updates a specific region of the canvas (eg. place where you drag the cursor).
@@ -19,5 +17,3 @@ To test how this API works, I actually developed a [Scratch Magic Tool](https://
 Back in the college days, we had this subject on *Computer Graphics* where you need to study some popular [line-drawing](http://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm) and [circle-drawing](http://en.wikipedia.org/wiki/Midpoint_circle_algorithm) algorithms. But there were no lab sessions for those subjects. Everyone where literally by-hearting those algorithms at that time. I would suggest all the CS faculty to conduct a lab session on Computer Graphics and ask students to implement those algorithms as a Magic Tool in Tux Paint using the Magic Tool API. It will be useful for them to see those algorithms in action. You may use my plugin or other plugins available in Tux Paint's `magic/src/`  directory as a reference for your development. Please do give a feedback here in the comment section when you implement some of these algorithms as a Magic Tool.
 
 *NOTE:* For compilation and installation of Tux Paint from sources, follow the instructions from [tp-scratch repository](https://github.com/semk/tp-scratch).
-{% endmarkdown %}
-{% endblock %}

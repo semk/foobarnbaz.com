@@ -3,11 +3,9 @@ title: Custom Authentication for Google App Engine apps
 date: '31-07-2011'
 time: '17:45'
 tags: ['Python', 'Tips', 'App Engine', 'GAESessions']
+layout: 'post.html'
 ---
-{% extends "post.html" %}
 
-{% block postcontent %}
-{% markdown %}
 ![Google App Engine](http://upload.wikimedia.org/wikipedia/en/3/38/Google_App_Engine_Logo.png)
 
 [Google App Engine](http://code.google.com/appengine) is a widely used and most popular [PaaS](en.wikipedia.org/wiki/Platform_as_a_service) solution provided by Google. App Engine provides the developer with a wide range of apis which can be used to develop web applications using any [WSGI](http://en.wikipedia.org/wiki/Web_Server_Gateway_Interface) compliant Frameworks ([Webapp](http://code.google.com/appengine/docs/python/tools/webapp/), [Tipfy](http://www.tipfy.org), [Django](http://www.django.org), [Bottle](http://bottlepy.org), [Tornado](http://www.tornadoweb.org) etc.). One of the apis App Engine provides is the [users api](http://code.google.com/appengine/docs/python/users/overview.html), which most of the developers confuses for an api which provides user creation, authentication for the application. But this api only authenticates Google Accounts (can be the application developer or any third-party Google Account) using [OAuth](http://oauth.net/). You can't really user this api to create or manage users for your application.
@@ -52,5 +50,3 @@ Make sure you have a `cron.yaml` with the correct info.
 	  schedule: every 24 hours
 
 You can find a complete sample application [here](https://github.com/dound/gae-sessions/blob/master/demo).
-{% endmarkdown %}
-{% endblock %}
