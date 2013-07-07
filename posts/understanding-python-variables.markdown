@@ -29,7 +29,7 @@ Assigning one variable to another makes a copy of the value and put that value i
 	:::c
 	int b = a;
 
-![int b = a;](http://python.net/~goodger/projects/pycon/2007/idiomatic/a2box.png)
+![b=2](http://python.net/~goodger/projects/pycon/2007/idiomatic/b2box.png) ![a = 2](http://python.net/~goodger/projects/pycon/2007/idiomatic/a2box.png)
 
 But in Python variables work more like tags unlike the boxes you have seen before. When you do an assignment in Python, it tags the value with the variable name.
 
