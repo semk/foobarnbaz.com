@@ -10,9 +10,9 @@ Whoever using [Emacs](http://www.gnu.org/software/emacs/) as their primary text-
 
 > Org mode is for keeping notes, maintaining TODO lists, planning projects, and authoring documents with a fast and effective plain-text system.
 
-Org mode allows you to create documents with a simple syntax. Different headers/sections in the document can be represented by a `*` symbol. A single `*` corresponds to an `<h1>` block in HTML and `**` represents a `<h2>`. Look at the following sample for example:-
+Org mode allows you to create documents with a simple syntax. Different headers/sections in the document can be represented by a `*` symbol. A single `*` corresponds to an `<h1>` block in HTML and `**` represents a `<h2>`.
 
-Org mode has the capability to export documents to various formats like ASCII text, PDF, LaTeX, XOXO, HTML, Freemind Mindmap etc. I was not quite happy with the output produced by [Freemind](http://freemind.sourceforge.net/wiki/index.php/Main_Page) from the `.mm` files exported by Org mode. So I switched to [Mindnode](http://mindnode.com/), another mindmapping software which is available for Mac OSX and produces visually pleasing mindmaps. But the `.mm` exports from Org mode doesn't work pretty well with Mindnode. So I wrote a simple [Org2OPML](https://github.com/semk/Org2OPML) converter that converts `.org` files to `.opml` files. OPML is another formats for mindmps/outlining and well supported by Mindnode. Have a look at the output:-
+Org mode has the capability to export documents to various formats like ASCII text, PDF, LaTeX, XOXO, HTML, Freemind Mindmap etc. I was not quite happy with the output produced by [Freemind](http://freemind.sourceforge.net/wiki/index.php/Main_Page) from the `.mm` files exported by Org mode. So I switched to [Mindnode](http://mindnode.com/), another mindmapping software which is available for Mac OSX and produces visually pleasing mindmaps. But the `.mm` exports from Org mode doesn't work pretty well with Mindnode. So I wrote a simple [Org2OPML](https://github.com/semk/Org2OPML) converter that converts `.org` files to `.opml` files. OPML is another formats for mindmps/outlining and well supported by Mindnode.
 
 The `.org` representation of the mindmap
 
