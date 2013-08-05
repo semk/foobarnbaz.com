@@ -2,7 +2,7 @@
 title: Scratch - A Magic Tool for Tux Paint
 date: '11-04-2011'
 time: '20:45'
-tags: ['Tux Paint', 'Magic Tool', 'C', 'Scratch']
+tags: ['Tux Paint', 'Magic Tool', 'C', 'Scratch', 'Projects']
 layout: 'post.html'
 ---
 

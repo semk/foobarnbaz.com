@@ -2,7 +2,7 @@
 title: 'Org2OPML - Make awesome mindmaps using Emacs Org mode and Mindnode'
 date: '02-08-2013'
 time: '00:45'
-tags: ['Mindmaps', 'Emacs', 'Org-mode']
+tags: ['Mindmaps', 'Emacs', 'Org-mode', 'Projects']
 layout: 'post.html'
 ---
 
