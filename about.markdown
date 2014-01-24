@@ -7,19 +7,19 @@ Hello there. My name is *Sreejith Kesavan* and I'm a [Python](http://python.org)
 
 Apart from writing here, I do follow some popular tech writings on the web. These are some of my favourites.
 
+* *[Hacker News](https://news.ycombinator.com/)*
+* *[High Scalability](http://highscalability.com/)*
 * *[Armin Ronacher's Thoughts and Writings](http://lucumr.pocoo.org/)*
-* *[Georg Brandl's Pythonic](http://pythonic.pocoo.org/)*
 * *[Jeff Atwood's Coding Horror](http://codinghorror.com)*
-* *[Ian Bicking: A Blog](http://blog.ianbicking.org/)*
 
 And some of my friends are also into blogging
 
-* *[Abhi's Experiments](http://abhidsm.blogspot.com)*
+* *[Abhi's Experiments](http://abhidsm.com/)*
 * *[Manu's new Universe](http://manuknkra.wordpress.com/)*
 
 ## My setup ##
 
-Recently I switched from a Toshiba Satellite L310 laptop to a [13" Macbook Pro](http://www.apple.com/in/macbookpro/specs-13inch.html) (MC700, Intel Core i5, 8GB RAM) which I use for all my computing needs. I use [Vim](http://vim.org), [TextMate](http://macromates.com), [Emacs](http://www.gnu.org/s/emacs/) and [Eclipse](http://eclipse.org) for all the coding and editing purposes and prefer [iTerm](http://iterm.sourceforge.net/) for commandline access. And I coudn't live without my Ubuntu VM's running under [VirtualBox](http://www.virtualbox.org/) and [VMWare Fusion](http://www.vmware.com/products/fusion/overview.html).
+Recently I switched from a Toshiba Satellite L310 laptop to a [13" Macbook Pro](http://www.apple.com/in/macbookpro/specs-13inch.html) (MC700, Intel Core i5, 8GB RAM) which I use for all my computing needs. I use [Vim](http://vim.org), [TextMate](http://macromates.com), [Emacs](http://www.gnu.org/s/emacs/) and [PyCharm](http://www.jetbrains.com/pycharm/) for all the coding and editing purposes and prefer [iTerm](http://iterm.sourceforge.net/) for commandline access. And I coudn't live without my Ubuntu VM's running under [VirtualBox](http://www.virtualbox.org/) and [VMWare Fusion](http://www.vmware.com/products/fusion/overview.html).
 
 ## About this site ##
 
