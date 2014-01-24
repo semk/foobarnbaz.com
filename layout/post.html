@@ -1,24 +1,28 @@
-{% extends "listing.html" %}
+{% extends "default.html" %}
 
 {% block content %}
-<h1>{{ post.title }}</h1>
+<main class="content" role="main">
 
-<time datetime="{{ post.date | date("%Y-%m-%d") }}">
-  {{ post.date | date("%b %d, %Y") }}
-</time>
+    <article class="post">
 
-<p></p>
+        <header class="post-header">
+            <a id="blog-logo" href="/">
+            	<img src="/images/logo.png" alt="Blog Logo" />
+            </a>
+        </header>
 
-{{ post.content }}
+        <span class="post-meta"><time datetime="{{ post.date | date("%Y-%m-%d") }}">{{ post.date | date("%b %d, %Y") }}</time>{% for tag in post.tags %} <em><a href="{{tag.url}}">{{ tag.name }}</a></em>{% if not loop.last %},{% endif %} {% endfor %}</span>
 
-<div>
-  <strong>Tagged under</strong> {% for tag in post.tags %} <em><a href="{{tag.url}}">{{ tag.name }}</a></em>{% if not loop.last %},{% endif %} {% endfor %}
-<div>
+        <h1 class="post-title">{{ post.title }}</h1>
 
-<br/>
+        <section class="post-content">
+            {{ post.content }}
+        </section>
 
-{% include "blog-nav.html" %}
+        <section class="comment">
+	  {% include "disqus.html" %}
+        </section>
 
-{% include "disqus.html" %}
+    </article>
+</main>
 {% endblock %}
-

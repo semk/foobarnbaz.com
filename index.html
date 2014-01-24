@@ -2,43 +2,45 @@
 title: Codeception
 paginate: true
 ---
-{% extends "listing.html" %}
+{% extends "default.html" %}
 
 {% block content %}
 
-{% for post in paginator.posts %}
-<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-<time datetime="{{ post.date | date("%Y-%m-%d") }}">
-  {{ post.date | date("%b %d, %Y") }}
-</time>
-<p></p>
-{{ post.content | excerpt(70) }}
-<div class="post-excerpt">
-  <p class="alignleft"><a href="{{ post.url }}">Read more...</a></p> 
-  <p class="alignright"><a href="{{ post.url }}#comments">Comments...</a></p>
-  <div style="clear: both;"></div>
-</div>
-<hr>
-{% endfor %}
+<header id="site-head" style="background: url(/images/blog_header.jpg)70% 0 no-repeat fixed; background-position:70% 0px;">
+    <div class="vertical">
+        <div id="site-head-content" class="inner">
+            <a id="blog-logo" href="{{ site.address }}"><img src="/images/logo.png" alt="Blog Logo" /></a>
+            <h1 class="blog-title">{{ site.name }}</h1>
+            <h2 class="blog-description">Musings and Ramblings of a Pythonista</h2>
+        </div>
+    </div>
+</header>
 
-<div class="blog-nav">
-  {% if paginator.previous_page != None %}
-  <p class="alignleft"><a href="/page{{ paginator.previous_page }}">&larr; Previous Page</a></p>
-  {% endif %}
-  {% if paginator.next_page != None %}
-  <p class="alignright"><a href="/page{{ paginator.next_page }}">Next Page &rarr;</a></p>
-  {% endif %}
-  <div style="clear: both;"></div>
-</div>
+<main class="content" role="main">
 
-<div>
-  <p><strong>Tag Cloud</strong>:</p>
-  <p>
-    {% for tag in tags %}
-    <a href="{{tag.url}}">{{tag.name}}</a>
+    {% for post in paginator.posts %}
+    <article class="post">
+        <header class="post-header">
+            <span class="post-meta"><time datetime="{{ post.date | date("%Y-%m-%d") }}">{{ post.date | date("%b %d, %Y") }}</time></span>
+            <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        </header>
+        <section class="post-excerpt">
+            <p>{{ post.content | excerpt(70) }}&hellip;</p>
+        </section>
+    </article>
+
     {% endfor %}
-  </p>
-</div>
 
-{% include "blog-search.html" %}
+    <nav class="pagination" role="navigation">
+      {% if paginator.next_page != None %}
+      <a class="newer-posts" href="/page{{ paginator.next_page }}">&larr; Newer Posts</a>
+      {% endif %}
+      <span class="page-number">Page 1 of 4</span>
+      {% if paginator.previous_page != None %}
+      <a class="older-posts" href="/page{{ paginator.previous_page }}">Older Posts &rarr;</a>
+      {% endif %}
+    </nav>
+
+</main>
+
 {% endblock %}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>foobarnbaz.com - {{ page.title }}</title>
+    <meta name="description" content="A blog by Sreejith Kesavan" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/pygment_trac.css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+</head>
+<body class="home_template">
+
+    {% block content %}{% endblock %}
+
+    <footer class="site-footer">
+        <a class="subscribe icon-feed" href="{{ site.address }}/rss/"><span class="tooltip">Subscribe!</span></a>
+        <div class="inner">
+             <section class="copyright">All content copyright <a href="/">{{ site.title }}</a> &copy; 2013 &bull; All rights reserved.</section>
+             <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org">Ghost</a></section>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="/assets/js/index.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="/assets/js/jquery.parallax-1.1.3.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Target your .container, .wrapper, .post, etc.
+            $(".post-content").fitVids();
+            $('#site-head').parallax("70%", 0.1);
+        });
+    </script>
+
+</body>
+</html>

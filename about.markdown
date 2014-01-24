@@ -1,7 +1,7 @@
 ---
 title: About
 ---
-{% extends "listing.html" %}
+{% extends "default.html" %}
 
 {% block content %}
 {% markdown %}
