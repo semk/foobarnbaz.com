@@ -9,9 +9,9 @@ paginate: true
 <header id="site-head" style="background: url(/images/blog_header.jpg)70% 0 no-repeat fixed; background-position:70% 0px;">
     <div class="vertical">
         <div id="site-head-content" class="inner">
-            <a id="blog-logo" href="{{ site.address }}"><img src="/images/logo.png" alt="Blog Logo" /></a>
+            <a id="blog-logo" href="/"><img src="/images/logo.png" alt="Blog Logo" /></a>
             <h1 class="blog-title">{{ site.name }}</h1>
-            <h2 class="blog-description">Musings and Ramblings of a Pythonista</h2>
+            <h2 class="blog-description">Musings and ramblings of a Pythonista</h2>
         </div>
     </div>
 </header>
@@ -33,11 +33,11 @@ paginate: true
 
     <nav class="pagination" role="navigation">
       {% if paginator.next_page != None %}
-      <a class="newer-posts" href="/page{{ paginator.next_page }}">&larr; Newer Posts</a>
+      <a class="older-posts" href="/page{{ paginator.next_page }}">&larr; Older Posts</a>
       {% endif %}
-      <span class="page-number">Page 1 of 4</span>
+      <span class="page-number">Page {{ paginator.current_page }} of {{ paginator.total_pages }}</span>
       {% if paginator.previous_page != None %}
-      <a class="older-posts" href="/page{{ paginator.previous_page }}">Older Posts &rarr;</a>
+      <a class="newer-posts" href="/page{{ paginator.previous_page }}">Newer Posts &rarr;</a>
       {% endif %}
     </nav>
 

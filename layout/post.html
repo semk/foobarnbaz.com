@@ -11,7 +11,10 @@
             </a>
         </header>
 
-        <span class="post-meta"><time datetime="{{ post.date | date("%Y-%m-%d") }}">{{ post.date | date("%b %d, %Y") }}</time>{% for tag in post.tags %} <em><a href="{{tag.url}}">{{ tag.name }}</a></em>{% if not loop.last %},{% endif %} {% endfor %}</span>
+	<p></p>
+
+        <span class="post-meta"><time datetime="{{ post.date | date("%Y-%m-%d") }}">{{ post.date | date("%b %d, %Y") }}</time></span>
+	<span class="post-meta">{% for tag in post.tags %} <a href="{{tag.url}}">{{ tag.name }}</a>{% if not loop.last %},{% endif %} {% endfor %}</span>
 
         <h1 class="post-title">{{ post.title }}</h1>
 
@@ -24,5 +27,14 @@
         </section>
 
     </article>
+
+    <nav class="pagination" role="navigation">
+      {% if post.previous != None %}
+      <a class="older-posts" href="{{ post.previous.url }}">&larr; Previous Post</a>
+      {% endif %}
+      {% if post.next != None %}
+      <a class="newer-posts" href="{{ post.next.url }}">Next Post &rarr;</a>
+      {% endif %}
+    </nav>
 </main>
 {% endblock %}
