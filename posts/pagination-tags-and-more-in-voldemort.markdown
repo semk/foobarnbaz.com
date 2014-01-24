@@ -2,7 +2,7 @@
 title: "Pagination, Tags and more in Voldemort"
 date: '06-04-2012'
 time: '00:25'
-tags: ['Python', 'Voldemort']
+tags: ['Python', 'Voldemort', 'Projects']
 layout: 'post.html'
 ---
 
