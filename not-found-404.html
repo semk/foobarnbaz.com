@@ -1,15 +1,29 @@
 ---
 title: 404 Not Found
 ---
-{% extends "default.html" %}
+{% extends "page.html" %}
 
 {% block content %}
-<h2>No donut for you &ndash; 404 Error</h2>
+<main class="content" role="main">
 
-<img src="/images/layout/404.jpg">
+  <article class="post">
 
-<p>The file or page you're looking for does not exist. Try searching.</p>
+    <header class="post-header">
+      <a id="blog-logo" href="/">
+        <img src="/images/logo.png" alt="Blog Logo" />
+      </a>
+    </header>
 
-{% include "search.html" %}
+    <h1 class="post-title">404 Not Found</h1><br/>
+
+    <section class="post-content">
+
+      <img src="/images/layout/404.jpg">
+
+      <p>The file or page you're looking for does not exist. Try searching.</p>
+    </section>
+
+    {% include "search.html" %}
+  </article>
+</main>
 {% endblock %}
-
