@@ -9,7 +9,7 @@ site_dir    : _site
 paginate    : 5
 
 site :
-    name        : "Codeception"
+    name        : "@semk"
     address     : "http://foobarnbaz.com"
     author_name : "Sreejith Kesavan"
     author_email: "sreejithemk@gmail.com"
