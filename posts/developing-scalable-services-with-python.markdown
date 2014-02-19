@@ -31,7 +31,7 @@ Then a question might arise. How do you share a socket created by the server pro
 	client_socket.send("Baby, I\'m so fast\r\n")
 
 ### Preforking
-Another way to solve this issue is by spawning multiple process from the main server which is listening on a socket/port and letting all the child processes to `accept()` connections from the client. Apache uses this style of process scaling known as "Preforking". A simple example using `multiprocessing` module which runs an instance of a `BaseHTTPServer.HTTPServer` on a pool of worker processes can be written very easily as follows.
+Another way to solve this issue is by spawning multiple process from the main server which is listening on a socket/port and letting pool of child processes to handle the new socket connections returned by `accept()`ing connections from the client. Apache uses this style of process scaling known as "Preforking". A simple example using `multiprocessing` module which runs an instance of a `BaseHTTPServer.HTTPServer` on a pool of worker processes can be written very easily as follows.
 
 	:::python
 	#
