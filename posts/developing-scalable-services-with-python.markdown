@@ -105,4 +105,4 @@ Another way to solve this issue is by spawning multiple process from the main se
 	    freeze_support()
 	    test()
 
-I wrote a simple wrapper for this kind of services which can be scaled. You can find it [here](http://github.com/semk/utils/prefork_server.py).
+I wrote a simple wrapper for this kind of services which can be scaled. You can find it [here](https://github.com/semk/utils/blob/master/prefork_server.py).
