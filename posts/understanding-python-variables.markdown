@@ -38,7 +38,7 @@ But in Python variables work more like tags unlike the boxes you have seen befor
 
 ![a = 1](http://python.net/~goodger/projects/pycon/2007/idiomatic/a1tag.png)
 
-and if you change the value of the varaible, it just changes the tag to the new value in memory. You dont need to do the housekeeping job of freeing the memory here. Python's Automatic Garbage Collection does it for you. When a value is without names/tags it is automatically removed from memory. 
+and if you change the value of the varaible, it just changes the tag to the new value in memory. You dont need to do the housekeeping job of freeing the memory here. Python's Automatic Garbage Collection does it for you. When a value is without names/tags it is automatically removed from memory.
 
 	:::python
 	a = 2
@@ -74,22 +74,24 @@ Now we will try to create custom objects and try to find their identities.
 	:::python
 	>>> class Foo:
 	...     pass
-	... 
+	...
 	>>> bar = Foo()
 	>>> baz = Foo()
 	>>> id(bar)
 	140730612513248
 	>>> id(baz)
 	140730612513320
-	>>> list_a = [1, 2, 3] # lists are mutable objects
+	>>> list_a = [1, 2, 3] # lists are containers holding data objects
 	>>> list_b = [1, 2, 3]
 	>>> id(list_a)
 	140116233272136
 	>>> id(list_b)
 	140116233272064
 	>>> [id(value) for value in list_a]
-	[24221624, 24221600, 24221576] # `int` is immutable
+	[24221624, 24221600, 24221576] # `int` is a basic data type
 	>>> [id(value) for value in list_b]
 	[24221624, 24221600, 24221576] # same as above
 
-As you can see, the two instances have different identities. That means, there are two different copies of the same object in memory. This behaviour is different from what you have seen before. When you are creating objects they will have unique identities unless you are using [Singleton Pattern](http://foobarnbaz.com/2010/10/06/borg-pattern/). All [immutable](http://en.wikipedia.org/wiki/Immutable_object) objects like `str`, `int`, `float` will have same identities when objects are created simultaneously.
+As you can see, the two instances have different identities. That means, there are two different copies of the same object in memory. This behaviour is different from what you have seen before. When you are creating custom objects or using complex data types like lists, tuples etc., they will have unique identities unless you are using [Singleton Pattern](http://foobarnbaz.com/2010/10/06/borg-pattern/) which overrides this behaviour (in `__new__()`) by giving out the same instance upon instance creation. All other basic data types in Python like `str`, `int`, `float` will have same identities and point to the same memory location.
+
+Thanks to Jadav Bheda (see comments) for correcting a mistake (of mentioning immutable types instead of the basic ones) in the article.
