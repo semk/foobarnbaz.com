@@ -13,7 +13,7 @@ Have you ever noticed any difference between variables in Python and C? For exam
 
 You can think of it as putting the value assigned in a box with the variable name as shown below.
 
-![int a =1;](http://python.net/~goodger/projects/pycon/2007/idiomatic/a1box.png)
+![int a =1;](/images/posts/2012-07-08-understanding-python-variables/a1box.png)
 
 And for all the variables you create a new box is created with the variable name to hold the value. If you change the value of the variable the box will be updated with the new value. That means doing
 
@@ -22,35 +22,35 @@ And for all the variables you create a new box is created with the variable name
 
 will result in
 
-![a = 2;](http://python.net/~goodger/projects/pycon/2007/idiomatic/a2box.png)
+![a = 2;](/images/posts/2012-07-08-understanding-python-variables/a2box.png)
 
 Assigning one variable to another makes a copy of the value and put that value in the new box.
 
 	:::c
 	int b = a;
 
-![b=2](http://python.net/~goodger/projects/pycon/2007/idiomatic/b2box.png) ![a = 2](http://python.net/~goodger/projects/pycon/2007/idiomatic/a2box.png)
+![b=2](/images/posts/2012-07-08-understanding-python-variables/b2box_a2box.png)
 
 But in Python variables work more like tags unlike the boxes you have seen before. When you do an assignment in Python, it tags the value with the variable name.
 
 	:::python
 	a = 1
 
-![a = 1](http://python.net/~goodger/projects/pycon/2007/idiomatic/a1tag.png)
+![a = 1](/images/posts/2012-07-08-understanding-python-variables/a1tag.png)
 
 and if you change the value of the varaible, it just changes the tag to the new value in memory. You dont need to do the housekeeping job of freeing the memory here. Python's Automatic Garbage Collection does it for you. When a value is without names/tags it is automatically removed from memory.
 
 	:::python
 	a = 2
 
-![a = 2](http://python.net/~goodger/projects/pycon/2007/idiomatic/a2tag.png) ![1](http://python.net/~goodger/projects/pycon/2007/idiomatic/1.png)
+![a = 2](/images/posts/2012-07-08-understanding-python-variables/a2tag_1.png)
 
 Assigning one variable to another makes a new tag bound to the same value as show below.
 
 	:::python
 	b = a
 
-![b = a](http://python.net/~goodger/projects/pycon/2007/idiomatic/ab2tag.png)
+![b = a](/images/posts/2012-07-08-understanding-python-variables/ab2tag.png)
 
 Other languages have 'variables'. Python has 'names'.
 
